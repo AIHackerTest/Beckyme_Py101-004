@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+    <p>
+      你查询过以下城市：<br>
+    </p>
+    {% for i in history %}
+      <li> {{ i }} </li>
+    {% endfor %}
+{% endblock %}

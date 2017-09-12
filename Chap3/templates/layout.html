@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>天气通查询系统</title>
+    <style>body{text-align: center; font-family: KaiTi}</style>
+  </head>
+  <body>
+    <h1>天气通查询系统</h1>
+    <p>欢迎使用本查询系统，数据来源为心知天气。</p>
+    <p>您可以输入城市名称查询天气，如有疑问请点击“帮助”按钮。</p>
+    <form method="get", "post" action="/search">
+      <input type='text' name="instruct">
+      <input type="submit" name="search" value="查询">
+      <input type="submit" name="history" value="历史">
+      <input type="submit" name="help" value="帮助">
+    </form>
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
